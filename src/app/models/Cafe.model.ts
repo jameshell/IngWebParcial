@@ -5,9 +5,9 @@ export class Cafe {
     nombre: string;
     tipo: TipoCafe;
     region: string;
-    imagen: string;
-    sabor: string;
-    altura: number;
+    imagen?: string;
+    sabor?: string;
+    altura?: number;
     constructor(
       id: number,
       nombre: string,

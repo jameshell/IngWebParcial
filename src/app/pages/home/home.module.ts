@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-
+import { ListaCafeComponent } from '../../shared/lista-cafe/lista-cafe.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [ HomeComponent ],
   imports: [
-    CommonModule
+    CommonModule,
+    ListaCafeComponent,
   ],
+  providers: [ provideHttpClient() ],
   exports: [ HomeComponent ]
 })
 export class HomeModule { }

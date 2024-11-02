@@ -1,1 +1,23 @@
-<p>lista-cafe works!</p>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Nombre</th>
+    <th scope="col">Tipo</th>
+    <th scope="col">Región</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (cafe of cafes; track cafe) {
+      <tr>
+        <td>{{ cafe.nombre }}</td>
+        <td>{{ cafe.tipo }}</td>
+        <td>{{ cafe.region }}</td>
+      </tr>
+    }
+    @empty {
+      <tr>
+        <td colspan="3">No hay cafe</td>
+      </tr>
+    }
+  </tbody>
+</table>
